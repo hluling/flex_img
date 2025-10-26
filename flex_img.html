@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Image Example</title>
+    <style>
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid orange;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1, p {
+            font-family: Arial;
+        }
+        @media screen and (min-width: 40em) and (max-width: 50em) {
+            h1 {
+                font-family: 'Lobster', cursive;
+                font-size: 3em;
+                color: orangered;
+            }
+        }
+        @media screen and (orientation: portrait) {
+            p {
+                background-color: coral;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            p {
+                background-color: skyblue;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flexible Image Example</h1>
+        <p>Image aspect ratio maintained as window resized:</p>
+        <img src="IMG_8555.jpg" alt="Beach landscape">
+    </div>
+</body>
+</html>
